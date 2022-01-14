@@ -8,7 +8,6 @@ export const GlobalStyle = createGlobalStyle`
         --blue-light: #6933FF;
         --text-title: #363F5F;
         --text-body: #969CB3;
-        --background: #F0F2F5;
         --shape: #FFFFFF;
     }
 
@@ -33,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
     }
 
-    body, button, input, textarea, {
+    body, button, input, textarea {
         font-family: 'Poppins', sans-serif;
         font-weight: 400;
     }
@@ -41,7 +40,6 @@ export const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5, h6, strong {
         font-family: 'Poppins', sans-serif;
         font-weight: 600;
-        font-color: red;
     }
 
     button {
