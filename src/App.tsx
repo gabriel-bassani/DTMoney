@@ -2,8 +2,8 @@ import { Dashboard } from "./components/Dashboard";
 import { Header } from "./components/Header";
 import { GlobalStyle } from "./styles/global";
 import { createServer } from 'miragejs';
-import ModalReact from 'react-modal';
 import { useState } from 'react';
+import { NewTransactionModal } from "./components/NewTransactionModal";
 createServer({
   routes() {
     this.namespace = 'api';
@@ -36,9 +36,7 @@ export function App() {
     <>
       <Header handleOpenNewTransactionModal={handleOpenNewTransactionModal}/>
       <Dashboard/>
-      <ModalReact isOpen={isNewTransactionModalOpen} onRequestClose={handleCloseNewTransactionModal}>
-                    <h2>Cadastrar transação</h2>
-                </ModalReact>
+      <NewTransactionModal isOpen={isNewTransactionModalOpen} onRequestClose={handleCloseNewTransactionModal}/>
       <GlobalStyle/>
 
     </>
